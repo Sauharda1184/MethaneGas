@@ -17,7 +17,7 @@ PIPELINE_ONLY_OUTPUT = "pipeline_map.png"
 PIPELINE_INCIDENTS_OUTPUT = "pipeline_incidents_map.png"
 
 COLORS = {"Interstate": "#d62728", "Intrastate": "#1f77b4"}
-INCIDENT_COLOR = "#eb6834"
+INCIDENT_COLOR = "#eda100"
 
 
 def main():
