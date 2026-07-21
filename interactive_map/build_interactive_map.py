@@ -3,7 +3,7 @@
 Data source: Natural_Gas_Interstate_and_Intrastate_Pipelines shapefile (EPSG:3857).
 Outputs:
   - pipeline_map.html            (pipelines only)
-  - pipeline_incidents_map.html  (pipelines + PHMSA incidents, 2002-present)
+  - pipeline_incidents_map.html  (pipelines + PHMSA incidents, 2010-present)
 """
 
 import sys
@@ -40,7 +40,7 @@ def build_pipeline_map(gdf, center):
 
 
 def add_incidents(m, incidents):
-    cluster = MarkerCluster(name="PHMSA incidents (2002-present)").add_to(m)
+    cluster = MarkerCluster(name="PHMSA incidents (2010-present)").add_to(m)
     for _, row in incidents.iterrows():
         date = row["INCIDENT_DATE"].date() if pd.notna(row["INCIDENT_DATE"]) else "unknown"
         popup = (

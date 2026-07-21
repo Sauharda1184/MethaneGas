@@ -3,7 +3,7 @@
 Data source: Natural_Gas_Interstate_and_Intrastate_Pipelines shapefile (EPSG:3857).
 Outputs:
   - pipeline_map.png            (pipelines only)
-  - pipeline_incidents_map.png  (pipelines + PHMSA incidents, 2002-present)
+  - pipeline_incidents_map.png  (pipelines + PHMSA incidents, 2010-present)
 """
 
 import geopandas as gpd
@@ -48,7 +48,7 @@ def main():
     incidents.plot(
         ax=ax, color=INCIDENT_COLOR, markersize=8, alpha=0.6,
         edgecolor="black", linewidth=0.2, zorder=4,
-        label="PHMSA incident (2002-present)",
+        label="PHMSA incident (2010-present)",
     )
     ax.set_xlim(xlim)
     ax.set_ylim(ylim)
